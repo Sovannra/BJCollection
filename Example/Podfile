@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'BJCollection_Example' do
+  pod 'BJCollection', :path => '../'
+
+  target 'BJCollection_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
