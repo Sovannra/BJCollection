@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'BJCollection'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of BJCollection.'
+  s.summary          = 'BJCollection is help your to design UICollectionView faster.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
+  s.description      = 'Install BJCollection to help your design faster and efficient with UICollectionView. Enjoy your code with BJCollection.'
 TODO: Add long description of the pod here.
                        DESC
 

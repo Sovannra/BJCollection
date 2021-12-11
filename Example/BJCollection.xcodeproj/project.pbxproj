@@ -38,13 +38,13 @@
 		607FACE51AFB9204008FA782 /* BJCollection_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BJCollection_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		8F7841722F2733C938EC5E54 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		8F7841722F2733C938EC5E54 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		9E509C823BEB9DF0AC4C288A /* Pods-BJCollection_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJCollection_Example.debug.xcconfig"; path = "Target Support Files/Pods-BJCollection_Example/Pods-BJCollection_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9EC79D0BB52B4DB567E98A26 /* Pods-BJCollection_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJCollection_Tests.debug.xcconfig"; path = "Target Support Files/Pods-BJCollection_Tests/Pods-BJCollection_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A5A3E0E6372A7AD345604431 /* Pods_BJCollection_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BJCollection_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C356A66132B02A6673705D90 /* BJCollection.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = BJCollection.podspec; path = ../BJCollection.podspec; sourceTree = "<group>"; };
+		C356A66132B02A6673705D90 /* BJCollection.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = BJCollection.podspec; path = ../BJCollection.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DCEB68359CA53DA1162F22BA /* Pods-BJCollection_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJCollection_Example.release.xcconfig"; path = "Target Support Files/Pods-BJCollection_Example/Pods-BJCollection_Example.release.xcconfig"; sourceTree = "<group>"; };
-		F0BE594CAC4E924B058FA1F4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F0BE594CAC4E924B058FA1F4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		FA002AB3EBE5F8B0E150E9A4 /* Pods_BJCollection_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BJCollection_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD381CD93757EEAF9A83CDBB /* Pods-BJCollection_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BJCollection_Tests.release.xcconfig"; path = "Target Support Files/Pods-BJCollection_Tests/Pods-BJCollection_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,7 +147,6 @@
 				9EC79D0BB52B4DB567E98A26 /* Pods-BJCollection_Tests.debug.xcconfig */,
 				FD381CD93757EEAF9A83CDBB /* Pods-BJCollection_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
