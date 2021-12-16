@@ -9,11 +9,17 @@ import UIKit
 
 class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
     
+    /** set the item count in row */
     var numberOfItemsInRow: Int = 3
+    /** set spacing between items */
     var spacingBetweenItems: CGFloat = 2.0
+    /** set items height */
     var heightItems: CGFloat = 0
+    /** set header height */
     var heightHeader: CGFloat = 0
+    /** set scroll direction: vertical or horizontal */
     var direction: UICollectionView.ScrollDirection = .vertical
+    /** to have sticky header. default is not */
     var stickyHeader: Bool = false
     
     override func prepare() {
@@ -44,6 +50,7 @@ class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
         minimumInteritemSpacing = spacingBetweenItems
     }
     
+    /** Update layout header view */
     fileprivate func updateHeaderLayout() {
         guard let collectionView = self.collectionView else { return }
         

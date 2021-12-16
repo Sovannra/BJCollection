@@ -7,6 +7,7 @@
 
 import UIKit
 
+/** CollectionViewFlowLayout style */
 public enum BJCollectionViewFlowLayoutStyle {
     case normal
     case waterfall
@@ -14,6 +15,10 @@ public enum BJCollectionViewFlowLayoutStyle {
 
 public class BJCollectionView: UICollectionView {
     
+    /**
+     show or hide vetical and horizontal scroll indicator.
+     Default is already hide.
+     */
     public var showScrollIndicator: Bool {
         get {
             return self.showScrollIndicator
@@ -28,8 +33,6 @@ public class BJCollectionView: UICollectionView {
         super.init(frame: frame, collectionViewLayout: layout)
         self.backgroundColor = .clear
     }
-    
-    var itemsArray: [CGFloat] = []
     
     public convenience init(
         numberOfItems: Int?=nil,
