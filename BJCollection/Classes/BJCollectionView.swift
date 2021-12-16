@@ -19,13 +19,10 @@ public class BJCollectionView: UICollectionView {
      show or hide vetical and horizontal scroll indicator.
      Default is already hide.
      */
-    public var showScrollIndicator: Bool {
-        get {
-            return self.showScrollIndicator
-        }
-        set {
-            self.showsHorizontalScrollIndicator = newValue
-            self.showsVerticalScrollIndicator = newValue
+    public var showScrollIndicator: Bool? {
+        didSet {
+            self.showsHorizontalScrollIndicator = showScrollIndicator ?? false
+            self.showsVerticalScrollIndicator = showScrollIndicator ?? false
         }
     }
             
