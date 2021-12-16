@@ -1,7 +1,7 @@
 {
   "name": "BJCollection",
   "version": "0.1.0",
-  "summary": "A short description of BJCollection.",
+  "summary": "BJCollection is help your to design faster.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/Sovannra/BJCollection",
   "license": {
@@ -18,5 +18,12 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "BJCollection/Classes/**/*"
+  "swift_versions": "4.2",
+  "source_files": "BJCollection/Classes/**/*",
+  "resource_bundles": {
+    "BJCollection": [
+      "BJCollection/Assets/*.png"
+    ]
+  },
+  "swift_version": "4.2"
 }
