@@ -47,7 +47,7 @@ public class BJCollectionView: UICollectionView {
             layout.numberOfItemsInRow = numberOfItems ?? layout.numberOfItemsInRow
             layout.spacingBetweenItems = spacingBetweenItems ?? layout.spacingBetweenItems
             layout.heightItems = heightItems ?? layout.heightItems
-            layout.widhtItems = widthItems ?? layout.widthItems
+            layout.widthItems = widthItems ?? layout.widthItems
             layout.direction = scrollDirection ?? layout.direction
             layout.heightHeader = heightHeader ?? layout.heightHeader
             layout.stickyHeader = stickyHeader ?? layout.stickyHeader
