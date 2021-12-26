@@ -11,9 +11,10 @@ import BJCollection
 
 class ViewController: UIViewController {
 
+    var headerView: BJCollectionHeaderView?
     var itemsArray: [CGFloat] = []
     lazy var vCollection: BJCollectionView = {
-        let view = BJCollectionView(numberOfItems: 3, heightItems: 180, heightHeader: 200, stickyHeader: true)
+        let view = BJCollectionView(numberOfItems: 3, heightItems: 180, heightHeader: 250, stickyHeader: true)
         view.delegate = self
         view.dataSource = self
         view.showScrollIndicator = false
@@ -73,8 +74,17 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let header: BJCollectionHeaderView = collectionView.dequeue(forHeader: indexPath)
-        return header
+        headerView = collectionView.dequeue(forHeader: indexPath)
+        return headerView!
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let contentOffsetY = scrollView.contentOffset.y
+        if contentOffsetY > 0 {
+            headerView?.animator.fractionComplete = 0
+            return
+        }
+        headerView?.animator.fractionComplete = abs(contentOffsetY) / 100
     }
 }
 

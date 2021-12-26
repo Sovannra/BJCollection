@@ -20,10 +20,26 @@ public class BJCollectionHeaderView: UICollectionReusableView  {
         return view
     }()
     
+    var animator: UIViewPropertyAnimator!
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(vImage)
         vImage.fillSuperview()
+        
+        //blur
+        setupVisualBlurEffect()
+    }
+    
+    fileprivate func setupVisualBlurEffect() {
+        animator = UIViewPropertyAnimator(duration: 0, curve: .linear, animations: { [weak self] in
+            
+            // treat this area as the end state animation
+            let visualBlurEffect = UIBlurEffect(style: .regular)
+            let visualEffectView = UIVisualEffectView(effect: visualBlurEffect)
+            self?.addSubview(visualEffectView)
+            visualEffectView.fillSuperview()
+        })
     }
     
     required init?(coder: NSCoder) {

@@ -15,6 +15,8 @@ class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
     var spacingBetweenItems: CGFloat = 2.0
     /** set items height */
     var heightItems: CGFloat = 0
+    /** set items width */
+    var widthItems: CGFloat = 0
     /** set header height */
     var heightHeader: CGFloat = 0
     /** set scroll direction: vertical or horizontal */
@@ -33,7 +35,8 @@ class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
         
         switch direction {
         case .horizontal:
-            itemSize = CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+            let width = widthItems == 0 ? collectionView.frame.width : widthItems
+            itemSize = CGSize(width: width, height: collectionView.frame.height)
         case .vertical:
             let margins = spacingBetweenItems + 1
             let width = (collectionView.frame.width - margins) / CGFloat(numberOfItemsInRow) - spacingBetweenItems

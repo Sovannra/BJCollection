@@ -34,6 +34,7 @@ public class BJCollectionView: UICollectionView {
     public convenience init(
         numberOfItems: Int?=nil,
         heightItems: CGFloat?=nil,
+        widthItems: CGFloat?=nil,
         heightHeader: CGFloat?=nil,
         spacingBetweenItems: CGFloat?=nil,
         scrollDirection: UICollectionView.ScrollDirection?=nil,
@@ -46,6 +47,7 @@ public class BJCollectionView: UICollectionView {
             layout.numberOfItemsInRow = numberOfItems ?? layout.numberOfItemsInRow
             layout.spacingBetweenItems = spacingBetweenItems ?? layout.spacingBetweenItems
             layout.heightItems = heightItems ?? layout.heightItems
+            layout.widhtItems = widthItems ?? layout.widthItems
             layout.direction = scrollDirection ?? layout.direction
             layout.heightHeader = heightHeader ?? layout.heightHeader
             layout.stickyHeader = stickyHeader ?? layout.stickyHeader
