@@ -30,7 +30,7 @@ public class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
         updateHeaderLayout()
     }
     
-    public fileprivate func updateLayout() {
+    public func updateLayout() {
         guard let collectionView = self.collectionView else { return }
         
         switch direction {
@@ -54,7 +54,7 @@ public class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
     }
     
     /** Update layout header view */
-    public fileprivate func updateHeaderLayout() {
+    public func updateHeaderLayout() {
         guard let collectionView = self.collectionView else { return }
         
         if heightHeader > 0 {
