@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BJCollection'
-  s.version          = '0.3.0'
+  s.version          = '0.4.0'
   s.summary          = 'BJCollection is help your to design faster.'
 
 # This description is used to generate tags and improve search results.
