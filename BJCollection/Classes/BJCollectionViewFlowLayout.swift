@@ -7,30 +7,30 @@
 
 import UIKit
 
-class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
+public class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     /** set the item count in row */
-    var numberOfItemsInRow: Int = 3
+    public var numberOfItemsInRow: Int = 3
     /** set spacing between items */
-    var spacingBetweenItems: CGFloat = 2.0
+    public var spacingBetweenItems: CGFloat = 2.0
     /** set items height */
-    var heightItems: CGFloat = 0
+    public var heightItems: CGFloat = 0
     /** set items width */
-    var widthItems: CGFloat = 0
+    public var widthItems: CGFloat = 0
     /** set header height */
-    var heightHeader: CGFloat = 0
+    public var heightHeader: CGFloat = 0
     /** set scroll direction: vertical or horizontal */
-    var direction: UICollectionView.ScrollDirection = .vertical
+    public var direction: UICollectionView.ScrollDirection = .vertical
     /** to have sticky header. default is not */
-    var stickyHeader: Bool = false
+    public var stickyHeader: Bool = false
     
-    override func prepare() {
+    public override func prepare() {
         super.prepare()
         updateLayout()
         updateHeaderLayout()
     }
     
-    fileprivate func updateLayout() {
+    public fileprivate func updateLayout() {
         guard let collectionView = self.collectionView else { return }
         
         switch direction {
@@ -49,12 +49,12 @@ class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
         }
         sectionInset = UIEdgeInsets(top: spacingBetweenItems, left: spacingBetweenItems, bottom: spacingBetweenItems, right: spacingBetweenItems)
         scrollDirection = direction
-        minimumLineSpacing = spacingBetweenItems
+        minimumLineSpacing = spacingBetweenItems + 2
         minimumInteritemSpacing = spacingBetweenItems
     }
     
     /** Update layout header view */
-    fileprivate func updateHeaderLayout() {
+    public fileprivate func updateHeaderLayout() {
         guard let collectionView = self.collectionView else { return }
         
         if heightHeader > 0 {
@@ -62,7 +62,7 @@ class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
         }
     }
     
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    public override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let layoutAttributes = super.layoutAttributesForElements(in: rect)
         if stickyHeader {
             layoutAttributes?.forEach({ (attribute) in
@@ -87,7 +87,7 @@ class BaseCollectionViewFlowLayout: UICollectionViewFlowLayout {
         return layoutAttributes
     }
     
-    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
+    public override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
         return true
     }
 }
